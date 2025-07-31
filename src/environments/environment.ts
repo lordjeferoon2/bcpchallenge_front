@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:8000/api/conversation'
+  apiUrl: 'https://bcpchallenge-fbdwgndyf5hjd6ch.centralus-01.azurewebsites.net/api/conversation'
 };
