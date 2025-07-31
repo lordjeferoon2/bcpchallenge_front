@@ -1,15 +1,16 @@
 {
   "name": "bcpchallenge-front",
   "version": "0.0.0",
+  "private": true,
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "dev": "ng serve",
+    "build": "ng build --configuration production",
+    "start": "http-server dist/bcpchallenge-front -p 8080",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:bcpchallenge_front": "node dist/bcpchallenge_front/server/server.mjs"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^17.0.0",
     "@angular/common": "^17.0.0",
@@ -22,6 +23,7 @@
     "@angular/router": "^17.0.0",
     "@angular/ssr": "^17.0.6",
     "express": "^4.18.2",
+    "http-server": "^14.1.1",
     "primeflex": "^3.3.1",
     "primeicons": "^7.0.0",
     "primeng": "^17.7.0",
