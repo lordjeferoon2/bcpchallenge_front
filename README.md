@@ -1,27 +1,85 @@
-# BcpchallengeFront
+# 🧠 Chatbot Cliente - Angular + FastAPI
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.6.
+Este proyecto es una aplicación web de chat construida con **Angular 17** y conectada a un backend en **FastAPI**, desplegada en **Azure App Service** con integración continua desde **GitHub**.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🚀 Tecnologías
 
-## Code scaffolding
+- **Angular 17**
+- **PrimeNG** (UI elegante y accesible)
+- **FastAPI** (backend)
+- **Azure App Service** (deploy)
+- **GitHub Actions** (CI/CD)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## 📦 Instalación local
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### 1. Clona el proyecto
 
-## Running unit tests
+```bash
+git clone https://github.com/tu-usuario/tu-repo.git
+cd tu-repo
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### 2. Instala dependencias
 
-## Running end-to-end tests
+```bash
+npm install
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### 3. Configura variables de entorno
 
-## Further help
+Crea el archivo:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+cp src/environments/environment.ts src/environments/environment.prod.ts
+```
+
+Y edita los archivos `environment.ts` y `environment.prod.ts` con tu backend:
+
+```ts
+export const environment = {
+  production: false,
+  apiUrl: 'http://localhost:8000/api' // o URL de Azure
+};
+```
+
+---
+
+## 🧪 Levantar en desarrollo
+
+```bash
+ng serve
+```
+
+---
+
+## 🛠️ Compilar para producción
+
+```bash
+ng build --configuration production
+```
+
+---
+
+## ☁️ Deploy a Azure con GitHub
+
+1. Sube este repo a GitHub
+2. Entra al [portal de Azure](https://portal.azure.com)
+3. Crea un **App Service**
+4. En el paso "Deploy", elige **GitHub** y selecciona este repo
+5. Azure generará automáticamente un flujo de CI/CD con **GitHub Actions**
+
+---
+
+## 🧹 Borrar conversación
+
+Haz clic en el botón 🗑️ para limpiar el historial del chat **y reiniciar el `session_id`**.
+
+---
+
+## 📄 Licencia
+
+MIT
