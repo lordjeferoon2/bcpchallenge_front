@@ -40,7 +40,3 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
-
-# Compilado en producción
-.env
-src/environments/environment*.ts
